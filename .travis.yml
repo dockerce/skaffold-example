@@ -1,0 +1,13 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+  - bash build.sh
+
+deploy:
+  provider: script
+  script: bash push.sh
+  on:
+    branch: master
